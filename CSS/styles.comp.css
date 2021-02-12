@@ -15,7 +15,7 @@
   font-weight: 800;
   color: #e78245;
   letter-spacing: 0.8rem;
-  padding-bottom: 4rem; }
+  padding-bottom: 2rem; }
 
 .navigation {
   display: grid;
@@ -62,34 +62,48 @@
     text-align: center; }
 
 .cta {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  width: 100vw;
-  grid-template-areas: "a b", "c d"; }
-  .cta_text {
-    text-align: center;
-    height: 30rem; }
-    .cta_text_text-1 {
-      grid-area: a; }
-  .cta_text-title {
-    font-family: "Pacifico";
-    color: #da723c;
-    font-size: 2rem;
-    padding-bottom: 1rem; }
-  .cta_text-info {
-    font-family: "Roboto";
-    color: #fff; }
-  .cta_media {
-    object-fit: cover; }
-    .cta_media_media-1 {
-      grid-area: b; }
-  .cta_video {
-    width: 100% !important;
-    height: auto !important; }
-  .cta_photo {
-    width: 100% !important;
-    height: auto !important; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 3rem; }
+  .cta_container {
+    position: relative;
+    width: 80rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+  .cta_card {
+    position: relative;
+    display: flex;
+    flex-direction: column; }
+    .cta_card:nth-child(even) {
+      flex-direction: column-reverse; }
+  .cta_image-container {
+    position: relative;
+    width: 20rem;
+    height: 20rem; }
+    .cta_image-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .cta_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 20rem;
+    height: 20rem; }
+    .cta_content h1 {
+      color: #e78245;
+      font-family: "Pacifico";
+      padding-bottom: 1rem; }
+    .cta_content p {
+      color: #fff;
+      font-family: "Roboto";
+      padding-bottom: 1rem; }
 
 * {
   margin: 0;

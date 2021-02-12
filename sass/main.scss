@@ -2,9 +2,11 @@
 @import "abstracts/variables";
 //page imports
 @import "pages/home";
-//components imports
+//layout imports
 @import "layout/navigation";
 @import "layout/feature";
 @import "layout/cta";
 //base imports
 @import "base/base";
+//components imports
+@import "components/button";
