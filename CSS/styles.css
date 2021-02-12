@@ -4,7 +4,18 @@
   height: 100vh; }
 
 .section-cta {
+  max-width: 100vw;
   background-color: #282d30; }
+
+.title {
+  text-align: center;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #e78245;
+  letter-spacing: 0.8rem;
+  padding-bottom: 4rem; }
 
 .navigation {
   display: grid;
@@ -49,6 +60,40 @@
     font-family: "Dancing Script";
     font-size: 2rem;
     text-align: center; }
+
+.cta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 30rem);
+  column-gap: 5rem;
+  width: 70vw;
+  margin: 0 auto; }
+  .cta_text {
+    display: grid;
+    place-items: center; }
+  .cta_text-1 {
+    text-align: left; }
+  .cta_text-2 {
+    text-align: right; }
+  .cta_text-title {
+    font-family: "Pacifico";
+    color: #da723c;
+    font-size: 2rem;
+    padding-bottom: 1rem; }
+  .cta_text-info {
+    font-family: "Roboto";
+    color: #fff;
+    font-size: 1.5rem; }
+  .cta_media {
+    display: grid;
+    place-items: center;
+    object-fit: fill; }
+  .cta_video {
+    width: 100%;
+    height: 100%; }
+  .cta_photo {
+    width: 100%;
+    height: 100%; }
 
 * {
   margin: 0;

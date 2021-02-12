@@ -1,6 +1,21 @@
 .section-header {
+  position: relative;
   background-color: #282d30;
   height: 100vh; }
+
+.section-cta {
+  max-width: 100vw;
+  background-color: #282d30; }
+
+.title {
+  text-align: center;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #e78245;
+  letter-spacing: 0.8rem;
+  padding-bottom: 4rem; }
 
 .navigation {
   display: grid;
@@ -29,6 +44,52 @@
     justify-content: end; }
   .navigation_icon {
     color: #e78245; }
+
+.feature {
+  width: 100%;
+  height: calc(100vh - 7rem);
+  display: grid;
+  place-items: center; }
+  .feature_title {
+    color: #e78245;
+    font-size: 4rem;
+    font-family: "Pacifico", cursive;
+    text-align: center; }
+  .feature_info {
+    color: #fff;
+    font-family: "Dancing Script";
+    font-size: 2rem;
+    text-align: center; }
+
+.cta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 100vw;
+  grid-template-areas: "a b", "c d"; }
+  .cta_text {
+    text-align: center;
+    height: 30rem; }
+    .cta_text_text-1 {
+      grid-area: a; }
+  .cta_text-title {
+    font-family: "Pacifico";
+    color: #da723c;
+    font-size: 2rem;
+    padding-bottom: 1rem; }
+  .cta_text-info {
+    font-family: "Roboto";
+    color: #fff; }
+  .cta_media {
+    object-fit: cover; }
+    .cta_media_media-1 {
+      grid-area: b; }
+  .cta_video {
+    width: 100% !important;
+    height: auto !important; }
+  .cta_photo {
+    width: 100% !important;
+    height: auto !important; }
 
 * {
   margin: 0;
