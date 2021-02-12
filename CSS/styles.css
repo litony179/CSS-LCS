@@ -15,7 +15,7 @@
   font-weight: 800;
   color: #e78245;
   letter-spacing: 0.8rem;
-  padding-bottom: 4rem; }
+  padding-bottom: 2rem; }
 
 .navigation {
   display: grid;
@@ -62,40 +62,73 @@
     text-align: center; }
 
 .cta {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 30rem);
-  column-gap: 5rem;
-  width: 70vw;
-  margin: 0 auto; }
-  .cta_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 3rem; }
+  .cta_container {
+    position: relative;
+    width: 80rem;
     display: grid;
-    place-items: center; }
-  .cta_text-1 {
-    text-align: left; }
-  .cta_text-2 {
-    text-align: right; }
-  .cta_text-title {
-    font-family: "Pacifico";
-    color: #da723c;
-    font-size: 2rem;
-    padding-bottom: 1rem; }
-  .cta_text-info {
-    font-family: "Roboto";
-    color: #fff;
-    font-size: 1.5rem; }
-  .cta_media {
-    display: grid;
-    place-items: center;
-    object-fit: fill; }
-  .cta_video {
-    width: 100%;
-    height: 100%; }
-  .cta_photo {
-    width: 100%;
-    height: 100%; }
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+  .cta_card {
+    position: relative;
+    display: flex;
+    flex-direction: column; }
+    .cta_card:nth-child(even) {
+      flex-direction: column-reverse; }
+  .cta_image-container {
+    position: relative;
+    width: 20rem;
+    height: 20rem; }
+    .cta_image-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .cta_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 20rem;
+    height: 20rem; }
+    .cta_content div {
+      padding: 3rem; }
+    .cta_content h1 {
+      color: #e78245;
+      font-family: "Pacifico";
+      padding-bottom: 1rem; }
+    .cta_content p {
+      color: #fff;
+      font-family: "Roboto";
+      padding-bottom: 1rem; }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+.btn {
+  --border-size: 2px;
+  display: block;
+  position: relative;
+  padding: 1.5em 3rem;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  text-decoration: none;
+  color: #e55743;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+  transition: background .8s ease; }
+  .btn:hover {
+    background: rgba(100, 0, 0, 0.2); }
