@@ -1,0 +1,56 @@
+.section-header {
+  position: relative;
+  background-color: #282d30;
+  height: 100vh; }
+
+.section-cta {
+  background-color: #282d30; }
+
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  align-items: center;
+  font-size: 1rem;
+  padding: 2rem 3rem; }
+  .navigation_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center; }
+  .navigation_item {
+    list-style: none; }
+  .navigation_link {
+    text-decoration: none;
+    color: #e78245; }
+  .navigation_logo-container {
+    display: grid;
+    justify-content: center; }
+  .navigation_logo {
+    color: #e78245; }
+  .navigation_socials {
+    display: grid;
+    grid-template-columns: repeat(4, 3rem);
+    justify-content: end; }
+  .navigation_icon {
+    color: #e78245; }
+
+.feature {
+  width: 100%;
+  height: calc(100vh - 7rem);
+  display: grid;
+  place-items: center; }
+  .feature_title {
+    color: #e78245;
+    font-size: 4rem;
+    font-family: "Pacifico", cursive;
+    text-align: center; }
+  .feature_info {
+    color: #fff;
+    font-family: "Dancing Script";
+    font-size: 2rem;
+    text-align: center; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
