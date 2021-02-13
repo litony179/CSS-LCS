@@ -1,11 +1,13 @@
 //variables imports
 @import "abstracts/variables";
+@import "abstracts/mixins";
 //page imports
 @import "pages/home";
 //layout imports
-@import "layout/navigation";
-@import "layout/feature";
-@import "layout/cta";
+@import "layout/home-cta";
+@import "layout/home-feature";
+@import "layout/home-navigation";
+@import "layout/home-about";
 //base imports
 @import "base/base";
 //components imports
