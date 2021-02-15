@@ -1,26 +1,74 @@
 .about {
     display: flex;
-    min-height: 100vh;
+    position: relative;
+    height: 100vh;
     align-items: center;
     justify-content: center;
     background-color: #e9ceb0;
     &_inner-container {
         display: grid;
         position: relative;
-        width: 90%;
+        width: 100%;
+        height: 80vh;
+        margin: 5rem;
         grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
     }
     &_img-container {
-        position: relative;
-        width: 100%;
-        height: 90vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 65%;
+        height: 100%;
+        z-index: 0;
+        @include respond(tablet-land) {
+            width: 50%;
+            height: 50%;
+        }
         img {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
         }
     }
-    &_content {}
+    &_content {
+        display: grid;
+        position: absolute;
+        background-color: $color-white;
+        height: 80%;
+        width: 50%;
+        top: 10%;
+        left: 50%;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        @include respond(tablet-land) {
+            width: 50%;
+            height: 100%;
+            top: 0;
+        }
+        div {
+            padding: 4rem;
+            @include respond(tablet-land) {
+                padding: 2rem;
+            }
+            h1 {
+                color: $color-primary-font-2;
+                letter-spacing: 0.5rem;
+                font-family: $font-sans-serif-2, sans-serif;
+                padding-bottom: 2rem;
+            }
+            p {
+                color: $color-primary-font;
+                font-family: $font-sans-serif, sans-serif;
+                line-height: 1.5rem;
+                padding-bottom: 2rem;
+            }
+            a {
+                background-color: $button-color-primary;
+                color: $color-white;
+                &:hover {
+                    background: rgba($button-color-primary, 0.8);
+                }
+            }
+        }
+    }
 }
