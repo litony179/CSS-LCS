@@ -1,7 +1,7 @@
 .section-header {
   position: relative;
   background-color: #282d30;
-  height: 90vh; }
+  height: 100vh; }
 
 .section-cta {
   max-width: 100vw;
@@ -13,7 +13,6 @@
 
 .section-gallery {
   max-width: 100vw;
-  max-height: 100vh;
   background-color: #282d30; }
 
 .cta {
@@ -24,9 +23,10 @@
   padding: 0 3rem; }
   .cta_container {
     position: relative;
-    width: 80rem;
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    padding-bottom: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr)); }
     @media screen and (max-width: 75em) {
       .cta_container {
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
@@ -73,7 +73,7 @@
     align-items: center;
     text-align: center;
     position: relative;
-    width: 20rem;
+    width: 100%;
     height: 20rem; }
     @media screen and (max-width: 75em) {
       .cta_content {
@@ -90,7 +90,8 @@
       padding-bottom: 1rem; }
 
 .feature {
-  width: 100%;
+  width: 80%;
+  margin: auto;
   height: calc(100vh - 7rem);
   display: grid;
   place-items: center; }
@@ -143,7 +144,7 @@
   .about_inner-container {
     display: grid;
     position: relative;
-    width: 100%;
+    width: 80%;
     height: 80vh;
     margin: 5rem;
     grid-template-columns: repeat(auto-fit, minmax(50%, 1fr)); }
@@ -157,6 +158,10 @@
     @media screen and (max-width: 75em) {
       .about_img-container {
         width: 50%;
+        height: 50%; } }
+    @media screen and (max-width: 37.5em) {
+      .about_img-container {
+        width: 100%;
         height: 50%; } }
     .about_img-container img {
       width: 100%;
@@ -177,6 +182,13 @@
         width: 50%;
         height: 100%;
         top: 0; } }
+    @media screen and (max-width: 37.5em) {
+      .about_content {
+        width: 80%;
+        margin: auto;
+        height: 70%;
+        top: 25%;
+        left: 10%; } }
     .about_content div {
       padding: 4rem; }
       @media screen and (max-width: 75em) {
@@ -200,7 +212,75 @@
 
 .gallery {
   width: 100%;
-  padding: 5rem; }
+  height: 100%;
+  padding: 3rem; }
+  .gallery_container {
+    width: 100%; }
+  .gallery_title {
+    padding: 3rem;
+    color: #e78245;
+    font-family: "Pacifico", cursive;
+    text-align: center;
+    font-size: 3rem; }
+  .gallery_info {
+    font-size: 1.5rem;
+    font-family: "Noto sans JP", sans-serif; }
+  .gallery_image-container {
+    display: grid;
+    width: 90%;
+    max-height: calc(80% - 5rem);
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 300px);
+    gap: 1rem;
+    grid-template-areas: "a a b b" "a a c d" "a a c e"; }
+    @media screen and (max-width: 75em) {
+      .gallery_image-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 300px);
+        grid-template-areas: "a b" "a c" "d e"; } }
+    @media screen and (max-width: 37.5em) {
+      .gallery_image-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, 300px);
+        grid-template-areas: "a" "b" "c" "d" "e"; } }
+  .gallery_image-item {
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden; }
+    .gallery_image-item img {
+      width: 100%;
+      height: 100%;
+      filter: brightness(0.6);
+      transition: 0.2s ease-in-out; }
+      .gallery_image-item img:hover {
+        filter: brightness(1) grayscale(0);
+        cursor: pointer; }
+  .gallery_image-card-1 {
+    grid-area: b; }
+    @media screen and (max-width: 37.5em) {
+      .gallery_image-card-1 {
+        grid-area: b; } }
+  .gallery_image-card-2 {
+    grid-area: c; }
+    @media screen and (max-width: 37.5em) {
+      .gallery_image-card-2 {
+        grid-area: c; } }
+  .gallery_image-card-3 {
+    grid-area: a; }
+    @media screen and (max-width: 37.5em) {
+      .gallery_image-card-3 {
+        grid-area: a; } }
+  .gallery_image-card-4 {
+    grid-area: d; }
+    @media screen and (max-width: 37.5em) {
+      .gallery_image-card-4 {
+        grid-area: d; } }
+  .gallery_image-card-5 {
+    grid-area: e; }
+    @media screen and (max-width: 37.5em) {
+      .gallery_image-card-5 {
+        grid-area: e; } }
 
 * {
   margin: 0;

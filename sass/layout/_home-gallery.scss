@@ -1,44 +1,84 @@
 .gallery {
     width: 100%;
-    padding: 5rem;
-    &_container {}
-    // &_container {
-    //     width: 100%;
-    //     height: 100%
-    // }
-    // &_title {
-    //     padding: 4rem;
-    // }
-    // &_image-container {
-    //     padding-right: 3rem;
-    //     display: grid;
-    //     margin: auto 0;
-    //     height: 100%;
-    //     grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-    //     grid-template-rows: repeat(auto-fit, minmax(50%, 1fr));
-    //     gap: 1rem;
-    //     grid-template-areas: "a a b b" "a a c d";
-    // }
-    // &_image-item {
-    //     height: 100%;
-    //     width: 100%;
-    //     overflow: hidden;
-    //     img {
-    //         width: 100%;
-    //         height: 100%;
-    //         object-fit: fill;
-    //     }
-    // }
-    // &_image-card-1 {
-    //     grid-area: b;
-    // }
-    // &_image-card-2 {
-    //     grid-area: c;
-    // }
-    // &_image-card-3 {
-    //     grid-area: a;
-    // }
-    // &_image-card-4 {
-    //     grid-area: d;
-    // }
+    height: 100%;
+    padding: 3rem;
+    &_container {
+        width: 100%;
+    }
+    &_title {
+        padding: 3rem;
+        color: $color-primary-font;
+        font-family: $font-cursive, cursive;
+        text-align: center;
+        font-size: 3rem;
+    }
+    &_info {
+        font-size: 1.5rem;
+        font-family: $font-sans-serif-2, sans-serif;
+    }
+    &_image-container {
+        display: grid;
+        width: 90%;
+        max-height: calc(80% - 5rem);
+        margin: auto;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 300px);
+        gap: 1rem;
+        grid-template-areas: "a a b b" "a a c d" "a a c e";
+        @include respond(tablet-land) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 300px);
+            grid-template-areas: "a b" "a c" "d e";
+        }
+        @include respond(phone) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(5, 300px);
+            grid-template-areas: "a" "b" "c" "d" "e";
+        }
+    }
+    &_image-item {
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            filter: brightness(0.6);
+            transition: 0.2s ease-in-out;
+            &:hover {
+                filter: brightness(1) grayscale(0);
+                cursor: pointer;
+            }
+        }
+    }
+    &_image-card-1 {
+        grid-area: b;
+        @include respond(phone) {
+            grid-area: b;
+        }
+    }
+    &_image-card-2 {
+        grid-area: c;
+        @include respond(phone) {
+            grid-area: c;
+        }
+    }
+    &_image-card-3 {
+        grid-area: a;
+        @include respond(phone) {
+            grid-area: a;
+        }
+    }
+    &_image-card-4 {
+        grid-area: d;
+        @include respond(phone) {
+            grid-area: d;
+        }
+    }
+    &_image-card-5 {
+        grid-area: e;
+        @include respond(phone) {
+            grid-area: e;
+        }
+    }
 }
